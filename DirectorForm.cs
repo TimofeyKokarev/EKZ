@@ -22,5 +22,11 @@ namespace T_L_EKZ
         {
             Model model = new Model();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormWorkers formWorkers = new FormWorkers();
+            formWorkers.ShowDialog();
+        }
     }
 }

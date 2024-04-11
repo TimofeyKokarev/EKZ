@@ -54,9 +54,10 @@ namespace T_L_EKZ
                         WaiterForm formwaiter = new WaiterForm();
                         formwaiter.ShowDialog();
                         break;
-                    default: throw new Exception("Роль не найдена!");
+                    default: throw new Exception();
                 }
             }
+            else MessageBox.Show("Роль не найдена!");
         }
     }
 }
