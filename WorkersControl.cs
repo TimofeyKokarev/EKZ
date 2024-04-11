@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,10 @@ namespace T_L_EKZ
             label2.Text = Workers.FirstName.ToString();
             label4.Text = Workers.SecondName.ToString();
             label6.Text= Workers.MiddleName.ToString();
-            pictureBox1.Image = Image.FromFile($@"WorkersPhoto\{Workers.Photo}");
+            if (File.Exists($@"WorkersPhoto\{Workers.Photo}") == false) Image.FromFile($@"WorkersPhoto\placeholder.png");
+            else pictureBox1.Image = Image.FromFile($@"WorkersPhoto\{Workers.Photo}");
+
+
         }
     }
 }
